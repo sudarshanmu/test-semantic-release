@@ -27,7 +27,7 @@
     ],
     [
       "@semantic-release/exec", {
-        "prepareCmd": './shell.sh'
+        "publishCmd": './shell.sh'
       }
     ],
     [
