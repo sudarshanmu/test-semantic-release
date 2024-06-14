@@ -6,8 +6,8 @@ on:
       - saiteja
 
 permissions:
-  contents: write
-  packages: write
+  contents: read
+  packages: read
 
 jobs:
   release:
