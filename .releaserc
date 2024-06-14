@@ -29,17 +29,17 @@
       "npmPublish": false
     }],
     [
-      "@semantic-release/exec", {
-        "successCmd": "echo '3242' >> app.json && cat app.json && git status && ls -lart"
-      }
-    ],
-    [
       "@semantic-release/git",
       {
         "assets": ["app.json", "CHANGELOG.md", "package.json", "package-lock.json", "node_modules/**/"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"      
       }
     ],
-    "@semantic-release/github"
+    "@semantic-release/github",
+    [
+      "@semantic-release/exec", {
+        "successCmd": "echo '3242' >> app.json && cat app.json && git status && ls -lart"
+      }
+    ]
   ]
 }
