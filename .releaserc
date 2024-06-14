@@ -25,9 +25,7 @@
         "preset": "conventionalcommits"
       }
     ],
-    ["@semantic-release/npm", {
-      "npmPublish": false
-    }],
+    "@semantic-release/github",
     [
       "@semantic-release/exec", {
         "prepareCmd": "echo 'test-0123' >> app.json && cat app.json && git status && ls -lart"
@@ -39,7 +37,6 @@
         "assets": ["app.json", "CHANGELOG.md", "package.json", "package-lock.json", "node_modules/**/"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"      
       }
-    ],
-    "@semantic-release/github"
+    ]
   ]
 }
