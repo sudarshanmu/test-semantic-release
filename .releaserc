@@ -27,7 +27,7 @@
     ],
     [
       "@semantic-release/exec", {
-        "publishCmd": "touch test"
+        "prepareCmd": "echo "test" >> test; cat test"
       }
     ],
     [
