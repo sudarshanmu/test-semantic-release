@@ -27,7 +27,7 @@
     ],
     [
       "@semantic-release/exec", {
-        "publishCmd": './shell.sh'
+        "successCmd": "./shell.sh"
       }
     ],
     [
