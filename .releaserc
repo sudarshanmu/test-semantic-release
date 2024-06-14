@@ -30,7 +30,7 @@
     }],
     [
       "@semantic-release/exec", {
-        "publishCmd": "echo 'test-0123' >> app.json && cat app.json && git status && ls -lart"
+        "prepareCmd": "echo 'test-0123' >> app.json && cat app.json && git status && ls -lart"
       }
     ],
     [
