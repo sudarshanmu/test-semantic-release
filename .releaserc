@@ -28,7 +28,7 @@
     "@semantic-release/github",
     [
       "@semantic-release/exec", {
-        "successCmd": "node update-app-json.js ${nextRelease.version}"
+        "prepareCmd": "node update-app-json.js ${nextRelease.version}"
       }
     ],
     [
