@@ -1,4 +1,5 @@
 #!/bin/bash
+sed -i -E 's/("version": ")([0-9]+)\.([0-9]+)\.([0-9]+)"/echo "\1\2."$((${3} + 1))."\4"/e' app.json
 sed -i -E 's/("buildNumber": ")([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)"/echo "\1\2."$((${3} + 1))."\4.\5"/e' app.json
 
 #current_build_number=$(cat app.json | jq -r '.expo.ios.buildNumber')

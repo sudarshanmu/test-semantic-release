@@ -27,7 +27,7 @@
     ],
     [
       "@semantic-release/exec", {
-        "prepareCmd": "node update-app-json.js ${nextRelease.version}"
+        "prepareCmd": "./shell.sh ${nextRelease.type}"
       }
     ],
     [
