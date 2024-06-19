@@ -17,7 +17,7 @@ if [ "$release_type" = "minor" ]; then
   jq --arg new_marketing_version "$new_marketing_version" '.build.base.env.MARKETING_VERSION = $new_marketing_version' eas.json > tmp.json && mv tmp.json eas.json
 
   old_version=$(cat package.json | jq -r '.version')
-  latest_version=$(echo $old_version | awk -F '.' '{print $1"."($2 + 1)"."$3}')
+  latest_version=$(echo $old_version | awk -F '.' '{print $1"."$2"."($3 + 1)}')
   sed -i "s/\"version\": \".*\"/\"version\": \"$latest_version\"/" package.json
 else
   echo "Unknown release type: $release_type"
