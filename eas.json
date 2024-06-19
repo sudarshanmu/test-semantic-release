@@ -1,0 +1,9 @@
+{
+  "build": {
+    "base": {
+      "env": {
+        "MARKETING_VERSION": "21.18.0"
+      }
+    }
+  }
+}
