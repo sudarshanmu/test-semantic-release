@@ -1,1 +1,2 @@
-This worklow contains goreleases package integration with semantic releasass
+This worklow contains goreleases package integration with semantic releasas
+Test
