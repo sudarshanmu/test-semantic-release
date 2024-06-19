@@ -1,5 +1,5 @@
 {
-  "version": "22.2.0",
+  "version": "22.2.1",
   "name": "test-semantic-release",
   "devDependencies": {
     "conventional-changelog-conventionalcommits": "^6.1.0",
