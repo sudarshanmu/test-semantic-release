@@ -2,7 +2,7 @@
   "build": {
     "base": {
       "env": {
-        "MARKETING_VERSION": "29.1.1"
+        "MARKETING_VERSION": "29.2.1"
       }
     }
   }
