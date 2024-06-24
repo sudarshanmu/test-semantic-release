@@ -1,0 +1,31 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches:
+      - saiteja
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2.1.0
+      with:
+        version: 'latest'
+        service_account_key: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        project_id: edvie-nonprod
+    
+    - name: Deploy to Staging (Canary)
+      run: |
+        gcloud sql import sql staging-db gs://sql_backup_d/updates/staging-updates.sql --database=postgres
+      env:
+        GCP_PROJECT: edvie-nonprod
+
